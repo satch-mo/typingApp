@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 
 @Entity
 @Table(name = "Users")
@@ -22,6 +23,8 @@ public class User {
 
     @Column
     private String password;
+
+//    private Set<Score> scoreSet = new HashSet<>();
 
     public User(UserDto userDto){
         if (userDto.getUsername() != null){

@@ -1,6 +1,7 @@
 package com.devmountain.TypingTidbits.entities;
 
 import com.devmountain.TypingTidbits.dtos.TidbitDto;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,8 @@ public class Tidbit {
 
     @Column(columnDefinition = "text")
     private String body;
+
+    private Long userId;
 
     public Tidbit(TidbitDto tidbitDto){
         if(tidbitDto.getBody() != null) {

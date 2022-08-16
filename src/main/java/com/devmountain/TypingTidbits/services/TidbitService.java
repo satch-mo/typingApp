@@ -10,4 +10,6 @@ public interface TidbitService {
     void addTidbit(TidbitDto tidbitDto);
 
     Optional<TidbitDto> getTidbitById(Long tidbitId);
+
+    public TidbitDto getRandomTidbitByUserId(Long userId);
 }

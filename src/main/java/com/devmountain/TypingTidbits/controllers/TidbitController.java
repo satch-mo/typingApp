@@ -23,6 +23,11 @@ public class TidbitController {
     public void addTidbit(@RequestBody TidbitDto tidbitDto){
         tidbitService.addTidbit(tidbitDto);
     }
+
+    @GetMapping("/userTidbit/{userId}")
+    public TidbitDto getTidbitBelongingToUser(@PathVariable Long userId){
+        return tidbitService.getRandomTidbitByUserId(userId);
+    }
 }
 
 

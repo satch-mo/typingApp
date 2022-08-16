@@ -6,10 +6,10 @@ body {
     /*background-color: #B9FAF8;*/
 }
 
-h1  {
-    color: #B9FAF8;
+img:hover {
+    transform:scale(1.2);
 }
 
-/*.card-text {*/
-/*    */
-/*}*/
+h1  {
+    font-size: 72px;
+}
