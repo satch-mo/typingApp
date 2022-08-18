@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface TidbitService {
     @Transactional
-    void addTidbit(TidbitDto tidbitDto);
+    void addTidbit(TidbitDto tidbitDto, Long userId);
 
     Optional<TidbitDto> getTidbitById(Long tidbitId);
 

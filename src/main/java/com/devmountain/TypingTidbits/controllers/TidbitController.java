@@ -9,7 +9,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/tidbit")
+@RequestMapping("/tidbits")
 public class TidbitController {
     @Autowired
     private TidbitService tidbitService;
@@ -19,9 +19,9 @@ public class TidbitController {
         return tidbitService.getTidbitById(tidbitId);
     }
 
-    @PostMapping("/")
-    public void addTidbit(@RequestBody TidbitDto tidbitDto){
-        tidbitService.addTidbit(tidbitDto);
+    @PostMapping("/user/{userId}")
+    public void addTidbit(@RequestBody TidbitDto tidbitDto, @PathVariable Long userId){
+        tidbitService.addTidbit(tidbitDto, userId);
     }
 
     @GetMapping("/userTidbit/{userId}")

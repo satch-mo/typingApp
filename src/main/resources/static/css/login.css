@@ -1,11 +1,8 @@
-body {
-    /*background-color: #6F2DBD;*/
-    /*background-color: #A663CC;*/
-    background-color: #B298DC;
-    /*background-color: #B8D0EB;*/
-    /*background-color: #B9FAF8;*/
+img {
+    width: 20%;
+    height: auto;
 }
 
-h1  {
-    color: #B9FAF8;
+img:hover {
+    transform:scale(1.1);
 }

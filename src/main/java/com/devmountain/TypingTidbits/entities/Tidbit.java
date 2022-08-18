@@ -21,7 +21,9 @@ public class Tidbit {
     @Column(columnDefinition = "text")
     private String body;
 
-    private Long userId;
+    @ManyToOne
+    @JsonBackReference
+    private User user;
 
     public Tidbit(TidbitDto tidbitDto){
         if(tidbitDto.getBody() != null) {

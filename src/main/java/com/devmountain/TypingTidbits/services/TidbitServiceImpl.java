@@ -2,7 +2,9 @@ package com.devmountain.TypingTidbits.services;
 
 import com.devmountain.TypingTidbits.dtos.TidbitDto;
 import com.devmountain.TypingTidbits.entities.Tidbit;
+import com.devmountain.TypingTidbits.entities.User;
 import com.devmountain.TypingTidbits.repositories.TidbitRepository;
+import com.devmountain.TypingTidbits.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,13 +16,18 @@ import java.util.Optional;
 
 @Service
 public class TidbitServiceImpl implements TidbitService{
+
+    @Autowired
+    private UserRepository userRepository;
     @Autowired
     private TidbitRepository tidbitRepository;
 
     @Override
     @Transactional
-    public void addTidbit(TidbitDto tidbitDto){
+    public void addTidbit(TidbitDto tidbitDto, Long userId){
+        Optional<User> userOptional = userRepository.findById(userId);
         Tidbit tidbit = new Tidbit(tidbitDto);
+        userOptional.ifPresent(tidbit::setUser);
         tidbitRepository.saveAndFlush(tidbit);
     }
 

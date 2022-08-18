@@ -10,21 +10,25 @@
     <title>Tidbits Register</title>
 </head>
 <body class="container" style="background: #B298DC">
+<img src="/images/android-chrome-192x192.png" alt="Tidbit Logo">
 <div class="container-md">
-    <div class="p-3 mb-2 bg-primary text-white">
+    <div class="p-3 mb-2 text-white" style="background-color: #A663CC;">
         <h1 style="color: #B9FAF8;">REGISTER</h1>
         <form id="register-form">
             <div class="form-group">
-                <label for="register-username">Username</label>
-                <input type="text" class="form-control" id="register-username" placeholder="Username">
+                <label for="register-username" style="color: #B9FAF8;">Username</label>
+                <input type="text" class="form-control" id="register-username" placeholder="Username" style="background-color: #B9FAF8;">
             </div>
             <div class="form-group">
-                <label for="register-password">Password</label>
-                <input type="password" class="form-control" id="register-password" placeholder="Password">
+                <label for="register-password" style="color: #B9FAF8;">Password</label>
+                <input type="password" class="form-control" id="register-password" placeholder="Password" style="background-color: #B9FAF8;">
             </div>
             <div class="mt-1">
-                <button id="submit-button" type="submit" class="btn btn-success">Submit</button>
-                <a href="/login.html" class="btn btn-secondary">To Login</a>
+                <button id="submit-button" type="submit" class="btn" style="background: #6F2DBD; color: #B9FAF8;">Submit</button>
+            </div>
+            <div class="mt-1">
+                <p>Account already created?</p>
+                <a href="/login.html" class="btn btn-secondary">Go to Login Page</a>
             </div>
         </form>
     </div>
